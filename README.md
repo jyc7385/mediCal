@@ -20,7 +20,7 @@
 <h2> 기술 스택 </h2>
 
 * front : HTML, CSS, Javascript, jQuery
-* back : Java, Spring framework(5.0.7), Oracle 11g, MyBatis, Tomcat(8.5)
+* back : Java(1.8), Spring framework(5.0.7), Oracle(11.2.0.1.0), MyBatis(3.4.6), Tomcat(8.5)
 
 <h2> 개발 기간 </h2>
 
