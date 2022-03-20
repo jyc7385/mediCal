@@ -1,11 +1,11 @@
 # 일정 관리 앱 (mediCal = medical + calendar)
 
-<h1> 1. 기획 의도 </h1>
+<h1> 기획 의도 </h1>
 
 언제 시력 검사 받았지? 언제 구강 검진 받았지? 검사 받을 때가 되었나? <br>
 이런 건강 검진 일정, 이젠 한 눈에 관리하자!! <br>
 
-<h1> 2. 주요 기능과 로직 </h1>
+<h1> 주요 기능과 로직 </h1>
 
 * 회원 가입
 * 로그인 / 로그아웃 : Spring Security를 이용
@@ -16,3 +16,12 @@
 * 회원 정보 수정 / 비밀번호 수정
 * 회원 탈퇴
 * 안드로이드 스튜디오 웹뷰 구현
+
+<h2> 기술 스택 </h2>
+
+* front : HTML, CSS, Javascript, jQuery
+* back : Java, Spring framework(5.0.7), Oracle, MyBatis, Tomcat(8.5)
+
+<h2> 개발 기간 </h2>
+
+* 2021.11.19 ~ 2022.01.30
