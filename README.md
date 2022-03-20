@@ -1,4 +1,4 @@
-# 일정 관리 앱 (mediCal = medical + calendar)
+# [개인 프로젝트] 일정 관리 앱 (mediCal = medical + calendar)
 
 <h1> 기획 의도 </h1>
 
