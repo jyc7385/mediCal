@@ -15,7 +15,7 @@
 * 유효성 검증 : 모든 input에 프론트 단에서의 유효성 검증을 적용
 * 회원 정보 수정 / 비밀번호 수정
 * 회원 탈퇴
-* Android Studio 웹뷰 구현
+* Android Studio Web View 구현
 
 <h2> 기술 스택 </h2>
 
