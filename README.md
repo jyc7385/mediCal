@@ -24,7 +24,7 @@
 - 유효성 검증 : 모든 input에 프론트 단에서의 유효성 검증을 적용
 - 계정 정보 조회 / 비밀번호 수정
 - 회원 탈퇴
-- Android Studio의 Web View를 이용한 app 구현
+- Android Studio의 Web View를 이용해 모바일 앱 형태로 구현
 
 ## DB 설계
 
