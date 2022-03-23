@@ -33,13 +33,24 @@
 ## 실행 화면
 
 <details><summary>회원 관련</summary>
+
+  <br>
   
   ![image](https://user-images.githubusercontent.com/48465072/159705200-099cd487-7ee7-4367-a80c-8c73f718f852.png)
-  회원가입 화면에서 아무 입력이 없는 경우 입력해달라는 메시지가 표시됩니다.
-  
-  ![image](https://user-images.githubusercontent.com/48465072/159704998-3eab1571-6489-4f03-b3a5-5033290fdf97.png)
-  입력이 유효성 검증을 통과하지 못하거나, ID가 이미 존재하거나, 비밀번호 체크가 틀려도 메시지가 출력됩니다.
+  <br>회원가입 화면에서 아무 입력이 없는 경우 입력해달라는 메시지가 표시됩니다.
 
+  ![image](https://user-images.githubusercontent.com/48465072/159705749-7d17b0ef-6f85-4d37-a237-60ad5b5a1c93.png)
+  <br>입력이 유효성 검증을 통과하지 못하거나, ID가 이미 존재하거나, 비밀번호 체크가 틀려도 메시지가 출력됩니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159706774-ffde9a61-a473-46c7-8130-bc9d8c057e81.png)
+  <br>로그인 폼에서도 빈칸이면 메시지가 출력되며, ID나 비밀번호가 틀리면 알림 창으로 알려줍니다.
+  
+  
+  
+  
+  
+
+  
   
 </details>
 
