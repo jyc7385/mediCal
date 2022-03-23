@@ -22,7 +22,7 @@
 - 커스텀 일정 추가 : 사용자가 직접 주기를 결정하는 일정
 - 단순 일정 추가 : 주기 없이 단순히 일자만 기록하는 일정
 - 유효성 검증 : 모든 input에 프론트 단에서의 유효성 검증을 적용
-- 비밀번호 수정
+- 계정 정보 조회 / 비밀번호 수정
 - 회원 탈퇴
 - Android Studio Web View 구현
 
@@ -45,12 +45,48 @@
   ![image](https://user-images.githubusercontent.com/48465072/159706774-ffde9a61-a473-46c7-8130-bc9d8c057e81.png)
   <br>로그인 폼에서도 빈칸이면 메시지가 출력되며, ID나 비밀번호가 틀리면 알림 창으로 알려줍니다.
   
+  ![image](https://user-images.githubusercontent.com/48465072/159718203-1017687a-56f4-4254-b3e9-8f708bf95801.png)
+  <br>로그인 후 볼 수 있는 계정 관련 페이지입니다. 로그아웃이나 계정 탈퇴하면 로그인 페이지 이동 후 알림 창으로 알려줍니다.
   
+  ![image](https://user-images.githubusercontent.com/48465072/159716981-3b834cf8-319c-4d7f-8c31-6f2e6ee1ddb1.png)
+  <br>계정 정보를 조회하고 비밀번호를 변경하는 페이지입니다. 유효성 검증이 적용되어 있습니다.
   
-  
-  
+</details>
 
+<details><summary>일정 관련</summary>
+
+  <br>
   
+  ![image](https://user-images.githubusercontent.com/48465072/159725929-33673d7d-e061-4b3e-8f1e-898d92a6e43d.png)
+  <br>로그인 후 나오는 개인 일정 목록 페이지로, Paging 기능이 적용되어 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159726408-2fc8fcb8-56e9-4013-9cb4-80a90a0bdb25.png)
+  <br>키워드 검색 기능도 적용되어 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159735689-9d26c72d-cc42-470a-a61f-d46b518d19f9.png)
+  <br>개인 일정 목록 페이지에서 등록 버튼을 누르면 3가지 유형의 일정 등록을 선택할 수 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159727497-508fc006-cd86-46cb-b5fd-f739b13afbe1.png)
+  <br>먼저 일반 일정 등록입니다. 분류를 선택하면 바로 아래 표에 해당 내용이 활성화되며, 체크박스를 누르면 아래에 선택한 종류를 표시합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159728674-04da1e1e-508e-4876-8261-b32cef1ae322.png)
+  <br>표에서 선택한 종류에 대한 주기도 자동으로 입력되며, 검사/복용 일자를 선택하면 다음 일자도 자동으로 계산해 입력됩니다. 
+  <br>여기 페이지 이외에도 입력 가능한 곳에는 유효성 검증이 적용되어 있습니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159732308-ae4143d8-5e36-4ab1-a727-3984b7917146.png)
+  <br>그 다음으로 커스텀 일정 등록입니다. 종류 명과 주기를 입력하면 다음 일자가 계산되어 입력됩니다. 
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159738680-e451145a-cb95-4680-8e4e-c6b994d4f29a.png)
+  <br>마지막으로 단순 일정 등록입니다. 주기 없이 단순히 일자만 입력합니다.
+
+  ![image](https://user-images.githubusercontent.com/48465072/159734545-9cabc20b-09a8-4c6e-932d-fe63506f9c60.png)
+  <br>단순 일정은 개인 일정 목록에서 다음 일자가 생략됩니다. 종류를 선택하면 해당 일정 조회/변경/삭제 페이지로 이동합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159737577-3df9174c-3bf4-4f27-8501-3ae822fbfb42.png)
+  <br>일정 조회/변경/삭제 페이지입니다. 일자나 메모를 변경할 수 있으며, 삭제도 가능합니다.
+  
+  ![image](https://user-images.githubusercontent.com/48465072/159738053-5c9b162e-c9ed-41f9-9928-becdd93a0389.png)
+  <br>DB에 저장되어 있는 사용 설명서를 보여주는 페이지입니다.
   
 </details>
 
