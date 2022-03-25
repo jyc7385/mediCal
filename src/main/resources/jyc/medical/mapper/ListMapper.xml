@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jyc.medical.mapper.ListMapper">
+
+	<select id="getList" resultType="jyc.medical.domain.ListVO">
+		SELECT *
+		FROM total_list_tbl
+	</select>
+	
+	<insert id="insert">
+		insert into total_list_tbl (id, schtype, takedate, possdate, cycleyear, cyclemonth, cycleweek, cycleday, memo, regtype)
+		values (#{id}, #{schType}, #{takeDate}, #{possDate}, #{cycleYear}, #{cycleMonth}, #{cycleWeek}, #{cycleDay}, #{memo}, #{regType})
+	</insert>
+	
+	<select id="read" resultType="jyc.medical.domain.ListVO" parameterType="map">
+		select * from total_list_tbl where id = #{id} and schtype = #{schType}
+	</select>
+	
+	<delete id="delete" parameterType="map">
+		delete from total_list_tbl where id = #{id} and schtype = #{schType}
+	</delete>
+	
+	<update id="update">
+		update total_list_tbl
+		set
+			takedate = #{takeDate},
+			possdate = #{possDate},
+			cycleYear = #{cycleYear},
+			cycleMonth = #{cycleMonth},
+			cycleWeek = #{cycleWeek},
+			cycleDay = #{cycleDay},
+			memo = #{memo},
+			regtype = #{regType}
+		where id = #{id} and schtype = #{schType}
+	</update>
+	
+	<select id="getListWithPaging" resultType="jyc.medical.domain.ListVO" parameterType="map">
+	
+		<![CDATA[
+			
+			SELECT id, schtype, takedate, possdate, cycleyear, cyclemonth, cycleweek, cycleday, memo, regtype
+			FROM (
+			
+				SELECT rownum AS rn, id, schtype, takedate, possdate, cycleyear, cyclemonth, cycleweek, cycleday, memo, regtype
+				FROM (					
+					
+					SELECT *
+					FROM total_list_tbl
+					WHERE id = #{id}
+					ORDER BY possdate ASC
+									
+				)
+				
+		]]>
+				
+					<trim prefix="WHERE (" suffix=") " prefixOverrides="OR">
+						<foreach item='type' collection="cri.typeArr">
+							<choose>
+								<when test="type == 'T'.toString()">
+									schtype like '%'||#{cri.keyword}||'%'
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+					
+		<![CDATA[	
+		
+			)
+			
+			WHERE rn BETWEEN ((#{cri.pageNum} - 1) * #{cri.amount} + 1) AND (#{cri.pageNum} * #{cri.amount})
+		
+		]]>
+		
+	</select>
+	
+	<select id="getTotalCount" resultType="int" parameterType="map">
+		SELECT count(*)
+		FROM total_list_tbl
+		WHERE
+		<trim prefix="(" suffix=") AND" prefixOverrides="OR">
+			<foreach item='type' collection="cri.typeArr">
+				<choose>
+					<when test="type == 'T'.toString()">
+						schtype like '%'||#{cri.keyword}||'%'
+					</when>
+				</choose>
+			</foreach>
+		</trim>
+			id = #{id}
+	</select>
+	
+	<select id="getMediList" resultType="jyc.medical.domain.MediVO">
+		SELECT *
+		FROM type_list_tbl
+	</select>
+	
+	<select id="schTypeCheck" resultType="int">
+		SELECT COUNT(*)
+		FROM total_list_tbl
+		WHERE id = #{id} AND schtype = #{schType}
+	</select>
+		
+	<select id="manual" resultType="String" parameterType="map">
+		select * from manual_tbl
+	</select>
+
+</mapper>
