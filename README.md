@@ -33,7 +33,7 @@
 
 ## 실행 화면
 
-<details><summary>회원 관련</summary>
+<details><summary>회원 관련 페이지</summary>
 
   <br>
   
@@ -54,7 +54,7 @@
   
 </details>
 
-<details><summary>일정 관련</summary>
+<details><summary>일정 관련 페이지</summary>
 
   <br>
   
@@ -93,6 +93,15 @@
   
 </details>
 
+<details><summary>Android App</summary>
+
+  <br>
+
+  ![image](https://user-images.githubusercontent.com/48465072/160073647-68bf7c5b-c906-4e10-8cff-e51acebf5572.png)
+  <br>Android Studio의 Web View를 이용해 구현한 모바일 App에서 실행 화면입니다.
+
+</details>
+  
 ## 마치며
 
 구현한 앱은 완전한 하나의 앱이라 보긴 어렵고 부가 기능에 적합하다고 생각합니다. 그래서 이 기능이 어디에 쓰일 수 있을지 생각해봤습니다.
